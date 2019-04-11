@@ -7,6 +7,7 @@ parameters:
             keywords:
                 - '(var_)?dump\(.*\);*'
                 - 'die(;|\(.*\));*'
+                - 'exit(;|\(.*\));*'
             regexp_type: P
             triggered_by:
                 - 'php'

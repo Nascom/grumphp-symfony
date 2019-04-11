@@ -1,11 +1,11 @@
 parameters:
     git_dir: .
-    bin_dir: ./vendor/bin
+    bin_dir: ./vendor/bin # depends on project configuration
     ascii:
     tasks:
         git_blacklist:
             keywords:
-                - '(var_|)dump\(.*\);*'
+                - '(var_)?dump\(.*\);*'
                 - 'die(;|\(.*\));*'
             regexp_type: P
             triggered_by:

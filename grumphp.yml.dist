@@ -1,7 +1,7 @@
-parameters:
-    git_dir: .
-    bin_dir: ./vendor/bin # depends on project configuration
+grumphp:
     ascii:
+        succeeded: ~
+        failed: ~
     tasks:
         git_blacklist:
             keywords:

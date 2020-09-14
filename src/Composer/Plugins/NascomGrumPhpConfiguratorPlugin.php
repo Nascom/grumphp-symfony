@@ -64,27 +64,17 @@ class NascomGrumPhpConfiguratorPlugin implements PluginInterface, EventSubscribe
 
     public function configureGrumPhp()
     {
-        $this->io->write(
-            '<fg=green>Copying grumphp.yml</fg=green>'
-        );
-
-        if (!file_exists('./grumphp.yml')) {
-            if (!copy(__DIR__ . '/../../../grumphp.yml.dist', './grumphp.yml')) {
-                $this->io->write(
-                    '<fg=red>Copying config failed!</fg=red>'
-                );
-                return;
-            }
-
-            $this->io->write(
-                '<fg=green>Copying config success!</fg=green>'
-            );
+        if (file_exists('./grumphp.yml')) {
             return;
         }
 
-        $this->io->write(
-            '<fg=red>grumphp.yml already exists, skipping!</fg=red>'
-        );
-        return;
+        $this->io->write('<fg=green>Copying grumphp.yml</fg=green>');
+
+        if (!copy(__DIR__ . '/../../../grumphp.yml.dist', './grumphp.yml')) {
+            $this->io->write('<fg=red>Copying config failed!</fg=red>');
+            return;
+        }
+
+        $this->io->write('<fg=green>Copying config success!</fg=green>');
     }
 }

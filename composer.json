@@ -3,8 +3,8 @@
   "type": "composer-plugin",
   "version": "1.0.0",
   "require": {
-    "composer-plugin-api": "^1.1",
-    "phpro/grumphp": "<1.0.0",
+    "composer-plugin-api": "^2.0",
+    "phpro/grumphp": "^1.0",
     "squizlabs/php_codesniffer": "^3.4",
     "phpstan/phpstan": "<1.0.0"
   },

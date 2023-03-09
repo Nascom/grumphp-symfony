@@ -1,7 +1,7 @@
 {
   "name": "nascom/grumphp-symfony",
   "type": "composer-plugin",
-  "version": "1.0.0",
+  "description": "GrumPHP + tools for Symfony",
   "require": {
     "composer-plugin-api": "^2.0",
     "phpro/grumphp": "^1.0",
